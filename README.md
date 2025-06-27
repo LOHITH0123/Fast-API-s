@@ -41,3 +41,35 @@ valid_lohith=food_items.keys()
 @app.get("/get_items/{lohith}")
 async def get_item(lohith: AvailableLohith):
     return food_items.get(lohith)
+
+
+==============================================================================================================================================================================
+
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
+
+
+@app.get("/hello/{name}")
+async def say_hello(name: str):
+    return {"message": f"Hello {name}"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
